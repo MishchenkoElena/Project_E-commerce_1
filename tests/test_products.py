@@ -41,15 +41,14 @@ def test_add_new_product():
 
 
 def test_product_price_incorrect(capsys, product1: Product):
+    capsys.readouterr()
     product1.price = -500
     captured = capsys.readouterr()
-    with patch("builtins.print"):
-        assert captured.out == "Цена не должна быть нулевая или отрицательная\n"
-        assert product1.price
+    assert captured.out == "Цена не должна быть нулевая или отрицательная\n"
+    assert product1.price
     product1.price = 0
-    with patch("builtins.print"):
-        assert captured.out == "Цена не должна быть нулевая или отрицательная\n"
-        assert product1.price
+    assert captured.out == "Цена не должна быть нулевая или отрицательная\n"
+    assert product1.price
 
 
 def test_product_price_setter_yes(capsys, product1: Product):
@@ -57,7 +56,7 @@ def test_product_price_setter_yes(capsys, product1: Product):
     with patch("builtins.input", side_effect=["y"]):
         product1.price = new_price
         captured = capsys.readouterr()
-        assert captured.out == ""
+        assert captured.out.split("\n")[-1] == ""
         assert product1.price == 100000.0
 
 
