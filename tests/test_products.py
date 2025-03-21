@@ -93,3 +93,14 @@ def test_product_iterator(product_iterator):
 
     with pytest.raises(StopIteration):
         next(product_iterator)
+
+
+def test_add_product_error(category1):
+    with pytest.raises(TypeError):
+        category1.add_product(1)
+
+    with pytest.raises(TypeError):
+        category1.add_product("Not a product")
+
+    with pytest.raises(TypeError):
+        category1.add_product([1, 2, 3])

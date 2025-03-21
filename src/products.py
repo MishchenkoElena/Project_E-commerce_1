@@ -75,6 +75,8 @@ class Category:
 
     def add_product(self, product: Product):
         """Метод для добавления товаров в категорию"""
+        if not isinstance(product, Product):
+            raise TypeError("Возникла ошибка TypeError при добавлении не продукта")
         self.__products.append(product)
         Category.product_count += 1
         Category.products_list.append(product)
