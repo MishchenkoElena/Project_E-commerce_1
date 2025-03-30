@@ -85,11 +85,6 @@ def smartphone2():
 
 
 @pytest.fixture
-def smartphone3():
-    return Smartphone("Xiaomi Redmi Note 11", "1024GB, Синий", 31000.0, 14, 90.3, "Note 11", 1024, "Синий")
-
-
-@pytest.fixture
 def grass1():
     return LawnGrass("Газонная трава", "Элитная трава для газона", 500.0, 20, "Россия", "7 дней", "Зеленый")
 
@@ -97,3 +92,13 @@ def grass1():
 @pytest.fixture
 def grass2():
     return LawnGrass("Газонная трава 2", "Выносливая трава", 450.0, 15, "США", "5 дней", "Темно-зеленый")
+
+
+@pytest.fixture
+def category_without_products():
+    return Category(
+        name="Телевизоры",
+        description="Современный телевизор, который позволяет наслаждаться просмотром, "
+                    "станет вашим другом и "
+                    "помощником",
+    )
