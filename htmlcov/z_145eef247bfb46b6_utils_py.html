@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>Coverage for src\utils.py: 0%</title>
+    <link href="favicon_32_cb_58284776.png" rel="icon" sizes="32x32">
+    <link href="style_cb_718ce007.css" rel="stylesheet" type="text/css">
+    <script defer src="coverage_html_cb_497bf287.js"></script>
+</head>
+<body class="pyfile">
+<header>
+    <div class="content">
+        <h1>
+            <span class="text">Coverage for </span><b>src\utils.py</b>:
+            <span class="pc_cov">0%</span>
+        </h1>
+        <aside id="help_panel_wrapper">
+            <input id="help_panel_state" type="checkbox">
+            <label for="help_panel_state">
+                <img alt="Show/hide keyboard shortcuts" id="keyboard_icon" src="keybd_closed_cb_ce680311.png">
+            </label>
+            <div id="help_panel">
+                <p class="legend">Shortcuts on this page</p>
+                <div class="keyhelp">
+                    <p>
+                        <kbd>r</kbd>
+                        <kbd>m</kbd>
+                        <kbd>x</kbd>
+                        &nbsp; toggle line displays
+                    </p>
+                    <p>
+                        <kbd>j</kbd>
+                        <kbd>k</kbd>
+                        &nbsp; next/prev highlighted chunk
+                    </p>
+                    <p>
+                        <kbd>0</kbd> &nbsp; (zero) top of page
+                    </p>
+                    <p>
+                        <kbd>1</kbd> &nbsp; (one) first highlighted chunk
+                    </p>
+                    <p>
+                        <kbd>[</kbd>
+                        <kbd>]</kbd>
+                        &nbsp; prev/next file
+                    </p>
+                    <p>
+                        <kbd>u</kbd> &nbsp; up to the index
+                    </p>
+                    <p>
+                        <kbd>?</kbd> &nbsp; show/hide this help
+                    </p>
+                </div>
+            </div>
+        </aside>
+        <h2>
+            <span class="text">22 statements &nbsp;</span>
+            <button class="run button_toggle_run" data-shortcut="r" title="Toggle lines run" type="button" value="run">0<span
+                    class="text"> run</span></button>
+            <button class="mis show_mis button_toggle_mis" data-shortcut="m" title="Toggle lines missing" type="button"
+                    value="mis">22<span class="text"> missing</span></button>
+            <button class="exc show_exc button_toggle_exc" data-shortcut="x" title="Toggle lines excluded" type="button"
+                    value="exc">0<span class="text"> excluded</span></button>
+        </h2>
+        <p class="text">
+            <a class="nav" href="z_145eef247bfb46b6_smartphone_py.html" id="prevFileLink">&#xab; prev</a> &nbsp; &nbsp;
+            <a class="nav" href="index.html" id="indexLink">&Hat; index</a> &nbsp; &nbsp;
+            <a class="nav" href="index.html" id="nextFileLink">&#xbb; next</a>
+            &nbsp; &nbsp; &nbsp;
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.7.0">coverage.py v7.7.0</a>,
+            created at 2025-03-22 00:09 +0300
+        </p>
+        <aside class="hidden">
+            <button class="button_next_chunk" data-shortcut="j" type="button"></button>
+            <button class="button_prev_chunk" data-shortcut="k" type="button"></button>
+            <button class="button_top_of_page" data-shortcut="0" type="button"></button>
+            <button class="button_first_chunk" data-shortcut="1" type="button"></button>
+            <button class="button_prev_file" data-shortcut="[" type="button"></button>
+            <button class="button_next_file" data-shortcut="]" type="button"></button>
+            <button class="button_to_index" data-shortcut="u" type="button"></button>
+            <button class="button_show_hide_help" data-shortcut="?" type="button"></button>
+        </aside>
+    </div>
+</header>
+<main id="source">
+    <p class="mis show_mis"><span class="n"><a href="#t1" id="t1">1</a></span><span class="t"><span
+            class="key">import</span> <span class="nam">json</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a href="#t2" id="t2">2</a></span><span class="t"><span
+            class="key">import</span> <span class="nam">os</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t3" id="t3">3</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a href="#t4" id="t4">4</a></span><span class="t"><span
+            class="key">from</span> <span class="nam">src</span><span class="op">.</span><span
+            class="nam">products</span> <span class="key">import</span> <span class="nam">Category</span><span
+            class="op">,</span> <span class="nam">Product</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t5" id="t5">5</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t6" id="t6">6</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a href="#t7" id="t7">7</a></span><span class="t"><span
+            class="key">def</span> <span class="nam">read_json</span><span class="op">(</span><span
+            class="nam">path</span><span class="op">:</span> <span class="nam">str</span><span class="op">)</span> <span
+            class="op">-></span> <span class="nam">dict</span><span class="op">:</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a href="#t8" id="t8">8</a></span><span class="t">    <span class="nam">full_path</span> <span
+            class="op">=</span> <span class="nam">os</span><span class="op">.</span><span class="nam">path</span><span
+            class="op">.</span><span class="nam">abspath</span><span class="op">(</span><span
+            class="nam">path</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a href="#t9" id="t9">9</a></span><span class="t">    <span
+            class="key">with</span> <span class="nam">open</span><span class="op">(</span><span
+            class="nam">full_path</span><span class="op">,</span> <span class="str">"r"</span><span class="op">,</span> <span
+            class="nam">encoding</span><span class="op">=</span><span class="str">"UTF-8"</span><span
+            class="op">)</span> <span class="key">as</span> <span class="nam">file</span><span class="op">:</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a href="#t10" id="t10">10</a></span><span class="t">        <span
+            class="nam">data</span> <span class="op">=</span> <span class="nam">json</span><span
+            class="op">.</span><span class="nam">load</span><span class="op">(</span><span class="nam">file</span><span
+            class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a href="#t11" id="t11">11</a></span><span class="t">    <span class="key">return</span> <span
+            class="nam">data</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t12" id="t12">12</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t13" id="t13">13</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a href="#t14" id="t14">14</a></span><span class="t"><span
+            class="key">def</span> <span class="nam">create_objects_from_json</span><span class="op">(</span><span
+            class="nam">data</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a href="#t15" id="t15">15</a></span><span class="t">    <span class="nam">categories</span> <span
+            class="op">=</span> <span class="op">[</span><span class="op">]</span>&nbsp;</span><span class="r"></span>
+    </p>
+    <p class="mis show_mis"><span class="n"><a href="#t16" id="t16">16</a></span><span class="t">    <span class="key">for</span> <span
+            class="nam">category</span> <span class="key">in</span> <span class="nam">data</span><span
+            class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a href="#t17" id="t17">17</a></span><span class="t">        <span
+            class="nam">products</span> <span class="op">=</span> <span class="op">[</span><span class="op">]</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a href="#t18" id="t18">18</a></span><span class="t">        <span
+            class="key">for</span> <span class="nam">product</span> <span class="key">in</span> <span class="nam">category</span><span
+            class="op">[</span><span class="str">"products"</span><span class="op">]</span><span class="op">:</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a href="#t19" id="t19">19</a></span><span class="t">            <span
+            class="nam">products</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span
+            class="nam">Product</span><span class="op">(</span><span class="op">**</span><span
+            class="nam">product</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a href="#t20" id="t20">20</a></span><span class="t">        <span
+            class="nam">category</span><span class="op">[</span><span class="str">"products"</span><span
+            class="op">]</span> <span class="op">=</span> <span class="nam">products</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a href="#t21" id="t21">21</a></span><span class="t">        <span
+            class="nam">categories</span><span class="op">.</span><span class="nam">append</span><span
+            class="op">(</span><span class="nam">Category</span><span class="op">(</span><span class="op">**</span><span
+            class="nam">category</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span
+            class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t22" id="t22">22</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a href="#t23" id="t23">23</a></span><span class="t">    <span class="key">return</span> <span
+            class="nam">categories</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t24" id="t24">24</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t25" id="t25">25</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a href="#t26" id="t26">26</a></span><span class="t"><span
+            class="key">if</span> <span class="nam">__name__</span> <span class="op">==</span> <span class="str">"__main__"</span><span
+            class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a href="#t27" id="t27">27</a></span><span class="t">    <span class="nam">data_json</span> <span
+            class="op">=</span> <span class="nam">read_json</span><span class="op">(</span><span class="str">"../data/products.json"</span><span
+            class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a href="#t28" id="t28">28</a></span><span class="t">    <span class="nam">categories_data</span> <span
+            class="op">=</span> <span class="nam">create_objects_from_json</span><span class="op">(</span><span
+            class="nam">data_json</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a href="#t29" id="t29">29</a></span><span class="t">&nbsp;</span><span
+            class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a href="#t30" id="t30">30</a></span><span class="t">    <span class="nam">print</span><span
+            class="op">(</span><span class="nam">categories_data</span><span class="op">[</span><span
+            class="num">1</span><span class="op">]</span><span class="op">.</span><span class="nam">name</span><span
+            class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a href="#t31" id="t31">31</a></span><span class="t">    <span class="nam">print</span><span
+            class="op">(</span><span class="nam">categories_data</span><span class="op">[</span><span
+            class="num">1</span><span class="op">]</span><span class="op">.</span><span class="nam">products</span><span
+            class="op">)</span>&nbsp;</span><span class="r"></span></p>
+</main>
+<footer>
+    <div class="content">
+        <p>
+            <a class="nav" href="z_145eef247bfb46b6_smartphone_py.html">&#xab; prev</a> &nbsp; &nbsp;
+            <a class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
+            <a class="nav" href="index.html">&#xbb; next</a>
+            &nbsp; &nbsp; &nbsp;
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.7.0">coverage.py v7.7.0</a>,
+            created at 2025-03-22 00:09 +0300
+        </p>
+    </div>
+</footer>
+</body>
+</html>
