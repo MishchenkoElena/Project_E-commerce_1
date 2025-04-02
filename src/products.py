@@ -1,4 +1,8 @@
-class Product:
+from src.base_product import BaseProduct
+from src.print_mixin import PrintMixin
+
+
+class Product(BaseProduct, PrintMixin):
     """Класс определения списка товаров"""
 
     name: str
@@ -10,7 +14,11 @@ class Product:
         self.name = name
         self.description = description
         self.__price = price
-        self.quantity = quantity
+        if quantity > 0:
+            self.quantity = quantity
+        else:
+            raise ValueError("Товар с нулевым количеством не может быть добавлен")
+        super().__init__()
 
     def __str__(self):
         return f"{self.name}, {self.__price} руб. Остаток: {self.quantity} шт."
@@ -93,3 +101,11 @@ class Category:
     def products_in_list(self):
         """Геттер, который выводит список товаров в виде списка"""
         return self.__products
+
+    def middle_price(self):
+        """Метод для расчета средней цены всех товаров в категории"""
+
+        try:
+            return round(sum([product.price for product in self.__products]) / len(self.__products), 2)
+        except ZeroDivisionError:
+            return 0
